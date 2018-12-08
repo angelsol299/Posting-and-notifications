@@ -12,6 +12,10 @@ const ProjectDetails = () => {
             eum, quam rerum quas blanditiis delectus laborum voluptas provident
             doloremque sunt?
           </p>
+          <div className="card-cation great lighten-4 grey-text">
+            <div>Posted by Mario Marin</div>
+            <div>2dn december, 2am</div>
+          </div>
         </div>
       </div>
     </div>
