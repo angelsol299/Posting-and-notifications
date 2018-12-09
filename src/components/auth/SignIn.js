@@ -1,12 +1,18 @@
 import React, { Component } from "react";
 
 class SignIn extends Component {
-  state = {};
+  state = {
+    email: "",
+    password: ""
+  };
   handleChange = e => {
-    console.log(e);
+    this.setState({
+      [e.target.id]: e.target.value
+    });
   };
   handleSubmit = e => {
-    console.log(e);
+    e.preventDefault();
+    console.log(this.state);
   };
   render() {
     return (
@@ -27,7 +33,7 @@ class SignIn extends Component {
               />
             </div>
             <div className="input-field">
-              <button className="btn pinl-a z-depth-0">Login</button>
+              <button className="btn pink-a z-depth-0">Login</button>
             </div>
           </form>
         </div>
