@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 
-class SignIn extends Component {
+class SignUp extends Component {
   state = {
     email: "",
-    password: ""
+    password: "",
+    firstName: "",
+    lastName: ""
   };
   handleChange = e => {
     this.setState({
@@ -33,7 +35,15 @@ class SignIn extends Component {
               />
             </div>
             <div className="input-field">
-              <button className="btn pink-a z-depth-0">Login</button>
+              <label htmlFor="lastName">Last Name</label>
+              <input type="text" id="lastName" onChange={this.handleChange} />
+            </div>
+            <div className="input-field">
+              <label htmlFor="firstName">First Name</label>
+              <input type="text" id="firstName" onChange={this.handleChange} />
+            </div>
+            <div className="input-field">
+              <button className="btn pink-a z-depth-0">SignUp</button>
             </div>
           </form>
         </div>
@@ -42,4 +52,4 @@ class SignIn extends Component {
   }
 }
 
-export default SignIn;
+export default SignUp;

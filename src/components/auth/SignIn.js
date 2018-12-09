@@ -33,7 +33,7 @@ class SignIn extends Component {
               />
             </div>
             <div className="input-field">
-              <button className="btn pink-a z-depth-0">Login</button>
+              <button className="btn blue-a z-depth-0">Login</button>
             </div>
           </form>
         </div>
