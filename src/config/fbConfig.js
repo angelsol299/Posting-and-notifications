@@ -1,4 +1,6 @@
 import firebase from "firebase";
+import "firebase/firestore";
+import "firebase/auth";
 
 // Initialize Firebase
 var config = {
@@ -10,3 +12,6 @@ var config = {
   messagingSenderId: "771709045613"
 };
 firebase.initializeApp(config);
+firebase.firestore().settings({ timestampsInSnapshots: true });
+
+export default firebase;
