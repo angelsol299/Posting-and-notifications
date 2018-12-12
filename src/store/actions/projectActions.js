@@ -3,14 +3,20 @@ export const createProject = project => {
     // make async call to database
     const firestore = getFirestore();
 
-    firestore.collection("projects").add({
-      ...project,
-      authorFirstName: "angel",
-      authorLastNname: "osoria",
-      authorId: 1234,
-      createAt: new Date()
-    });
-
-    dispatch({ type: "CREATE_PROJECT", project });
+    firestore
+      .collection("projects")
+      .add({
+        ...project,
+        authorFirstName: "angel",
+        authorLastNname: "osoria",
+        authorId: 1234,
+        createAt: new Date()
+      })
+      .then(() => {
+        dispatch({ type: "CREATE_PROJECT", project });
+      })
+      .catch(err => {
+        dispatch({ type: "CREATE_PROJECT_ERROR", err });
+      });
   };
 };
