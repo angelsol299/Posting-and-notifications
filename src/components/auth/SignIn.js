@@ -17,6 +17,7 @@ class SignIn extends Component {
     this.props.signIn(this.state);
   };
   render() {
+    const { authError } = this.props;
     return (
       <div>
         <div className="container">
@@ -36,7 +37,9 @@ class SignIn extends Component {
             </div>
             <div className="input-field">
               <button className="btn blue-a z-depth-0">Login</button>
-              <div className="red-text center" />
+              <div className="red-text center">
+                {authError ? <p>{authError}</p> : null}
+              </div>
             </div>
           </form>
         </div>
@@ -47,7 +50,7 @@ class SignIn extends Component {
 
 const mapStateToProps = state => {
   return {
-    authorError: state.auth.authError
+    authError: state.auth.authError
   };
 };
 
