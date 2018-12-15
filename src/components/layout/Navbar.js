@@ -14,8 +14,7 @@ const Navbar = props => {
         <Link to="/" className="brand-logo">
           Bloggin
         </Link>
-        <SignedInLinks />
-        <SignedOutLinks />
+        {links}
       </div>
     </nav>
   );
