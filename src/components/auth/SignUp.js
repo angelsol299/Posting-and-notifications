@@ -70,4 +70,7 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps)(SignUp);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SignUp);
